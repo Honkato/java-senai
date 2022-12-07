@@ -7,12 +7,28 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Fibonnaci fi = new Fibonnaci();
-        System.out.println(Arrays.toString(fi.thanos()));
-
-        /*
         FuncoesUsuais f = new FuncoesUsuais();
+        ArrayList<String> thanificacao = new ArrayList<>();
+        Fibonnaci fi = new Fibonnaci();
+        System.out.println("***Exemplo***");
+        System.out.println(Arrays.toString(fi.thanos()));
+        System.out.println("***Exemplo***");
+        while (true) {
+            String tahnos = f.pegarStr("Digite o nome de um amigo, ou 0 para Thanifica-los");
+            if (tahnos.equals("0")) {
+                if (thanificacao.size() > 2) {
+                    break;
+                } else {
+                    System.out.println("Você precisa de pelo menos 2 friends");
+                }
+            }
+            thanificacao.add(tahnos);
+        }
+        System.out.println(Arrays.toString(fi.thanos(thanificacao.toArray(new String[0]))));
 
+
+
+/*
         Random r = new Random();
         ArrayList<String> thanificacao = new ArrayList<>();
         while (true){
